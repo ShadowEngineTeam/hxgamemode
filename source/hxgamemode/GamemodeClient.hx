@@ -39,6 +39,15 @@ extern class GamemodeClient
 	static function request_end():Int;
 
 	/**
+	 * Requests that GameMode restarts for the current process.
+	 *
+	 * @return 0 if the request was sent successfully.
+	 *         -1 if the request failed.
+	 */
+	@:native('gamemode_request_restart')
+	static function request_restart():Int;
+
+	/**
 	 * Queries the current status of GameMode for the current process.
 	 *
 	 * @return 0 if GameMode is inactive.
